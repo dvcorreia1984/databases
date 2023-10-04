@@ -33,6 +33,7 @@ SELECT * FROM animals;
 
 BEGIN;
 DELETE FROM animals;
+SELECT * FROM animals;
 ROLLBACK;
 SELECT * FROM animals;
 
@@ -41,6 +42,7 @@ SELECT * FROM animals;
 BEGIN;
 DELETE FROM animals
 WHERE date_of_birth > '2022-01-01';
+SELECT * FROM animals;
 SAVEPOINT my_savepoint;
 UPDATE animals
 SET weight_kg = weight_kg * -1;
@@ -49,6 +51,7 @@ UPDATE animals
 SET weight_kg = weight_kg * -1
 WHERE weight_kg < 0;
 COMMIT;
+SELECT * FROM animals;
 
 -- Screenshot5
 SELECT COUNT(*) AS total_animals
