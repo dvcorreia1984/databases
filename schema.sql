@@ -61,3 +61,5 @@ CREATE TABLE visits (
     CONSTRAINT pk_visits PRIMARY KEY (animals_id, vets_id, date_of_visit)
 );
 
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
