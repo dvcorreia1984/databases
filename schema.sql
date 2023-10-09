@@ -65,4 +65,4 @@ ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 
    create index animal_id_desc on visits(animal_id desc);
    create index vet_id_desc on visits(vet_id desc);
-   create index email_desc on owners(email desc);
+   create index email_desc on owners((lower(email)) desc);
