@@ -61,3 +61,8 @@ CREATE TABLE visits (
     CONSTRAINT pk_visits PRIMARY KEY (animals_id, vets_id, date_of_visit)
 );
 
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+   create index animal_id_desc on visits(animal_id desc);
+   create index vet_id_desc on visits(vet_id desc);
+   create index email_desc on owners((lower(email)) desc);
